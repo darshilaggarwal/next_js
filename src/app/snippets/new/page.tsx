@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { log } from 'console'
+import { redirect } from 'next/navigation'
 
 const createsnippets = () => { 
 
@@ -18,6 +19,7 @@ const createsnippets = () => {
         })  
         console.log(snippet);
         
+        redirect("/");
 
 
     }
